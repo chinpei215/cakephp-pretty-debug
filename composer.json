@@ -1,0 +1,14 @@
+{
+    "name": "chinpei215/cakephp-pretty-debug",
+    "description": "CakePHP 2.x plugin to make debug toolbar pretty",
+    "type": "cakephp-plugin",
+    "keywords": ["cakephp", "debug"],
+    "homepage": "https://github.com/chinpei215/cakephp-pretty-debug",
+    "license": "MIT",
+    "require": {
+        "composer/installers": "^1.0.23"
+    },
+    "extra": {
+        "installer-name": "PrettyDebug"
+    }
+}
