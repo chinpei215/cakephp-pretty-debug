@@ -1,0 +1,334 @@
+#debug-kit-toolbar {
+	top: auto;
+	bottom: 0;
+	height: 40px;
+	font-family: Arial,sans-serif;
+}
+
+#debug-kit-toolbar *, #debug-kit-toolbar *:before {
+	box-sizing: content-box;
+}
+
+#debug-kit-toolbar #panel-tabs {
+	box-shadow: none;
+	border-radius: 0;
+	width: 100%;
+	height: 100%;
+	overflow-x: auto;
+	background: #ffc600;
+}
+
+.minimized#debug-kit-toolbar {
+	opacity: 1;
+}
+
+.minimized#debug-kit-toolbar #panel-tabs {
+	width: auto;
+	border-radius: 8px 0 0;
+}
+
+#debug-kit-toolbar .panel-tab {
+	border-right: 1px solid #ffb400;
+}
+#debug-kit-toolbar .panel-tab:last-child {
+	border-right: none;
+}
+
+#debug-kit-toolbar {
+	font-size: 16px;
+}
+
+#debug-kit-toolbar a {
+	color: inherit;
+	font-weight: normal;
+	text-decoration: none;
+}
+
+#debug-kit-toolbar a:hover {
+	color: inherit;
+	text-decoration: none;
+}
+
+#debug-kit-toolbar .panel-tab > a,
+#debug-kit-toolbar .panel-tab > a:hover {
+	padding: 0 9px;
+	line-height: 40px;
+	border: none;
+	text-shadow: none;
+	font-size: inherit;
+	transition: background 0.25s;
+	background: #ffc600;
+	text-decoration: none;
+}
+
+#debug-kit-toolbar .panel-tab > a.active {
+	text-decoration: none;
+	color: #fff;
+	background: #009688;
+}
+
+#debug-kit-toolbar .panel-tab.icon {
+	float: right;
+}
+
+#debug-kit-toolbar .panel-tab.icon img {
+	display: none;
+	/*
+	height: 30px;
+	width: 30px;
+	padding: 5px;
+	*/
+}
+
+#debug-kit-toolbar .panel-tab.icon a {
+	padding: 0;
+	height: 40px;
+	width: 40px;
+	background: url(../img/cake.icon.png) no-repeat 50% 50%;
+}
+
+#debug-kit-toolbar .panel-content {
+	display: block !important;
+	height: 100% !important;
+	position: fixed;
+	top: 100%;
+	z-index: -1;
+	transition: background 0.25s;
+}
+
+#debug-kit-toolbar .panel-tab > a.active + .panel-content {
+	top: 0;
+}
+
+#debug-kit-toolbar .panel-resize-handle {
+	display: none;
+}
+
+#debug-kit-toolbar .panel-content h1 {
+	background: #009688;
+	color: #fff;
+	padding: 10px;
+	margin: 0;
+	font-size: 31.5px;
+	line-height: 40px;
+	transition: background 0.25s;
+	position: relative;
+}
+
+#debug-kit-toolbar .panel-content h2,
+#debug-kit-toolbar .panel-content h3,
+#debug-kit-toolbar .panel-content h4 {
+	color: inherit;
+	margin: 0 0 10px;
+}
+
+#debug-kit-toolbar .panel-content h2 {
+	font-size: 24.5px;
+}
+
+#debug-kit-toolbar .panel-content h4 {
+	font-size: 17.5px;
+}
+
+#debug-kit-toolbar .panel-content-data > h2:first-child {
+	display: none;
+}
+
+#debug-kit-toolbar #environment-tab .panel-content-data > h2:first-child {
+	display: block;
+}
+
+#debug-kit-toolbar .panel-resize-region {
+	top: 60px;
+	margin-bottom: 25px;
+}
+
+#debug-kit-toolbar .panel-toggle {
+	display: none;
+}
+
+#debug-kit-toolbar .panel-close {
+	position: absolute;
+	top: 15px;
+	right: 15px;
+	background: rgba(0, 0, 0, 0.3);
+	color: #fff;
+	padding: 8px;
+	line-height: 12px;
+	font-size: 20px;
+	height: 12px;
+	width: 12px;
+	border-radius: 15px;
+	vertical-align: middle;
+	cursor: pointer;
+	z-index: 999;
+}
+
+#debug-kit-toolbar table.debug-table {
+	border: none;
+	line-height: 1;
+}
+
+#debug-kit-toolbar table.debug-table th {
+	width: 50%;
+}
+
+#debug-kit-toolbar .debug-timers table.debug-table th:nth-child(1) {
+	width: 40%;
+}
+
+#debug-kit-toolbar .debug-timers table.debug-table th:nth-child(2) {
+	width: 10%;
+}
+
+#debug-kit-toolbar #sql_log-tab table.debug-table th {
+	width: 10%;
+}
+#debug-kit-toolbar #sql_log-tab table.debug-table th:nth-child(1) {
+	width: auto;
+}
+
+#debug-kit-toolbar #sql_log-tab table.debug-table.sql-log-query-explain th {
+	width: auto;
+}
+
+#debug-kit-toolbar #routes-tab table.debug-table th {
+	width: auto;
+}
+
+#debug-kit-toolbar table.debug-table td, #debug-kit-toolbar table.debug-table th {
+	border-left: none;
+	padding: 6px;
+	vertical-align: baseline;
+}
+
+#debug-kit-toolbar table.debug-table td {
+	border-bottom: 1px solid #ccc;
+}
+
+#debug-kit-toolbar table.debug-table th {
+	background: transparent;
+	border-bottom: 3px solid #004d40;
+	color: #111;
+}
+
+#debug-kit-toolbar .debug-kit-graph-bar {
+	padding: 0;
+	border-radius: 0;
+	height: 14px;
+}
+
+#debug-kit-toolbar .debug-kit-graph-bar-value {
+	background: #259b24;
+	border-radius: 0;
+	height: 100%;
+}
+
+#debug-kit-toolbar #history-tab ul {
+	list-style: none;
+	margin: 10px 0 0;
+}
+
+#debug-kit-toolbar #history-tab li {
+	padding-left: 15px;
+	border-bottom: 1px solid #ccc;
+	position: relative;
+	margin: 0;
+}
+
+#debug-kit-toolbar #history-tab li a {
+	padding: 6px;
+	line-height: 20px;
+}
+
+#debug-kit-toolbar #history-tab li a.active {
+	background: none;
+}
+
+#debug-kit-toolbar #history-tab li a.active:before {
+	content: "\2022";
+	font-size: 40px;
+	color: #42bd41;
+	position: absolute;
+	top: 6px;
+	left: 0;
+}
+
+#debug-kit-toolbar .panel-content p {
+	margin: 0 0 10px;
+}
+
+#debug-kit-toolbar #sql_log-tab h2 + p,
+#debug-kit-toolbar .panel-content p.warning,
+#debug-kit-toolbar .panel-content p.info {
+	padding: 10px 10px 10px 20px;
+	font-size: 14px;
+}
+
+#debug-kit-toolbar #sql_log-tab h2 + p,
+#debug-kit-toolbar .panel-content p.warning {
+	background: #ffab91;
+}
+
+#debug-kit-toolbar .panel-content p.info {
+	background: #80deea;
+	border: none;
+}
+
+#debug-kit-toolbar #sql_log-tab h2 + p:before,
+#debug-kit-toolbar .panel-content p.warning:before,
+#debug-kit-toolbar .panel-content p.info:before {
+	padding: 8px;
+	line-height: 12px;
+	font-size: 20px;
+	height: 12px;
+	width: 12px;
+	border-radius: 15px;
+	text-align: center;
+	vertical-align: middle;
+	display: inline-block;
+	position: relative;
+	left: -11px;
+
+	background-color: #fff;
+}
+
+#debug-kit-toolbar #sql_log-tab h2 + p:before,
+#debug-kit-toolbar .panel-content p.warning:before {
+	color: #ffab91;
+	content: '!';
+}
+#debug-kit-toolbar #sql_log-tab h2 + p strong {
+	display: none;
+}
+
+#debug-kit-toolbar .panel-content p.info:before {
+	color: #80deea;
+	content: 'i';
+}
+
+#debug-kit-toolbar .neat-array {
+	background: #B3E5FC;
+}
+
+#debug-kit-toolbar .neat-array li {
+	background: rgba(255, 255, 255, 0.95);
+	border-color: #B3E5FC;
+}
+
+#debug-kit-toolbar .neat-array .neat-array {
+	border-color: #B3E5FC;
+}
+
+#debug-kit-toolbar .panel-history {
+	background: inherit;
+}
+
+.toolbar-history#debug-kit-toolbar .panel-content h1,
+.toolbar-history#debug-kit-toolbar .panel-tab > a.active {
+	background: #ab47bc;
+}
+
+#debug-kit-toolbar .sql-explain-link {
+	display: none;
+}
